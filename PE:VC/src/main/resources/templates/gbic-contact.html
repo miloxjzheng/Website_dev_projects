@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+    <title>GBIC-Contact</title>
+    <link rel="shortcut icon" href="/img/logo2.png" type="image/x-icon"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/gbic-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .container-fluid {
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+
+        #sendbtn {
+            background-color: #000000;
+            color: #fff;
+            border-radius: 0;
+            width:;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        #sendbtn:hover {
+            background-color: #979797;
+        }
+
+        #sendbtn:click {
+            background-color: #979797;
+        }
+
+        #navlogo {
+            height: 45px;
+        }
+
+        .navmargin {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        h3 {
+            color: #231F20;
+            font-size: 24px;
+        }
+
+        p {
+            color: #231F20;
+            font-size: 20px;
+        }
+
+        li {
+            color: #231F20;
+            font-size: 24px;
+        }
+
+        #emailstyle {
+            font-weight: 900;
+            color: #3B3B3B;
+            text-decoration: none;
+        }
+
+        #emailstyle:hover {
+            color: #656565;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid navmargin">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="/img/Logonav.png" alt="GBIC" id="navlogo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/portfolio" class="navmenu">Portfolio</a></li>
+                <li><a href="/team" class="navmenu">Team</a></li>
+                <li><a href="/career" class="navmenu">Career</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--content-->
+<div class="container-fluid" style="margin-top:70px;">
+    <h3 style="text-align:center;margin-top:0px;">CONTACT</h3>
+    <hr class="line">
+    <p style="text-align:center">Email us at <a class="emailaddress" href="info@token72.io"
+                                                id="emailstyle">info@gbic.io</a></p>
+    <p style="text-align:center">or use the form below</p>
+    <div class="row">
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-6">
+            <form action="/action_page.php">
+                <div class="form-group" style="">
+                    <label for="name">Your Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Suject</label>
+                    <input type="text" class="form-control" id="subject" placeholder="" name="subject">
+                </div>
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" placeholder="" rows="5"></textarea><br>
+                <div style="text-align:center;">
+                    <input class="btn" type="button" onclick="subscribe()" value="Send">
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript">
+            function subscribe() {
+                var name =$("#name").val();
+                var subject =$("#subject").val();
+                var email =$("#email").val();
+                var message = $("#message").val();
+                var json = {
+                    name: name,
+                    subject: subject,
+                    email: email,
+                    content : message};
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",//服务器返回的数据类型
+                    contentType: "application/json",//post请求的信息格式
+                    url: "https://token72.com/api/contact",
+                    // data: $('#form1').serialize(),
+                    data: JSON.stringify(json),
+                    success: function (result) {
+                        console.log(result);//在浏览器中打印服务端返回的数据(调试用)
+                        if (result.code === 1) {
+                            alert("SUCCESS");
+                            self.location.href = '/'
+                        } else {
+                            alert(result.message);
+                        }
+                    }
+                });
+            }
+        </script>
+        <div class="col-sm-3">
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+<footer section="Footer">
+    <div class="row" id="footer">
+        <div class="col-sm-6" id="footermenu">
+            <ul class="list-inline footlist">
+                <li><a href="/" class="footstyle">About</a></li>
+                <li><a href="/contact" class="footstyle">Contact</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-2" id="footer2">
+            <p id="footerright">&copy; 2018 GBIC</p>
+        </div>
+        <div class="col-sm-3" id="footer3">
+            <a href="https://twitter.com/gbicofficial?lang=en" target="_blank" class="footericon"><i
+                    class="fa fa-twitter-square" style="padding:1vw;"></i></a>
+            <a href="https://medium.com/@gbic" target="_blank" class="footericon"><i class="fa fa-medium"
+                                                                                     style="padding:1vw;"></i></a>
+            <a href="https://www.linkedin.com/company/gbicofficial/" target="_blank" class="footericon"><i
+                    class="fa fa-linkedin-square" style="padding:1vw;"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+

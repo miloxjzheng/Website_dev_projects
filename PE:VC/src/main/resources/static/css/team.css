@@ -1,0 +1,273 @@
+/* CSS Document */
+body {
+	font-family: Verdana, Geneva, sans-serif;
+}
+/*Nav*/
+  .navbar {
+      background-color: #FFFFFF;
+      border: 0;
+      font-size: 12px !important;
+      border-radius: 0;
+	  height:80px;
+  }
+
+.colormain:hover{
+      color: #74C9CA !important;
+      background-color: #fff !important;
+  }
+
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #808184 !important;
+	  margin-top: 30px;
+  }
+
+.container-fluid{
+	padding:0px;
+}
+
+
+.navlogo{
+	height:30px;
+	margin-top: 15px;
+}
+
+.navbar-right{
+	margin-right:57px;
+}
+
+.navbar-collapse{
+	background-color:#FFFFFF;
+}
+
+
+.colormain{
+	color:#808184;
+	font-size: 18px;
+	padding: auto;
+	margin-top: 18px;
+}
+
+#colorsubscribe{
+	color:#74C9CA;
+	font-size: 18px;
+	padding: auto;
+	margin-top: 18px;
+}
+
+
+
+#colorsubscribe:hover{
+      color: #808184 !important;
+      background-color: #FFFFFF !important;
+  }
+
+/* img */
+.img{
+	width:100%;
+	margin-top:80px;
+}
+
+	.homepic{
+	background-image: url("../img/hiDPi_Bg.png");
+	background-size:cover;
+	max-width:100%;
+	height:480px;
+	margin-top:80px;
+}
+
+.homeword1{
+	font-size:35px;
+	text-align: right;
+	padding-right: 8%;
+	padding-top:3.5%;
+	word-spacing: 1.3px;
+	font-family: Montserrat, sans-serif;
+	font-weight: 300;
+	color:#FFFFFF;
+	
+}
+
+.subtitlelogo{
+	margin:30px;
+	max-width: 36%;
+    height: auto;
+}
+
+.teamword{
+	font-size:120%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.title{
+	text-align: center;
+}
+
+.homeword2{
+	font-size:35px;
+	text-align: right;
+	padding-right: 8%;
+	word-spacing: 1.3px;
+	font-family: Montserrat, sans-serif;
+	font-weight: 300;
+	color:#FFFFFF
+}
+
+.homeword3{
+	font-size:35px;
+	text-align: right;
+	padding-right: 8%;
+	word-spacing: 1.3px;
+	font-family: Montserrat, sans-serif;
+	font-weight: 300;
+	color:#FFFFFF
+}
+
+.homeword4{
+	font-size:35px;
+	text-align: right;
+	padding-right: 8%;
+	word-spacing: 1.3px;
+	font-family: Montserrat, sans-serif;
+	font-weight: 300;
+	color:#FFFFFF
+}
+
+.homeword{
+	margin-left: 40%;
+}
+
+/* team&partner */
+.wordteam{
+	font-size:25px;
+	color:#808184;
+	margin-top: 30px;
+	margin-bottom:30px;
+	float:left;
+}
+
+.teambrief{
+	font-size: 130%;
+}
+.wordadvisor{
+	font-size:25px;
+	color:#FFFFFF;
+	margin-top: 30px;
+	margin-bottom:30px;
+	float:left;
+}
+
+.logocareercenter{
+	padding-top:5%;
+	padding-bottom: 5%;
+}
+
+.bg-gray{
+	background-color: #808184;
+}
+
+.logoteam{
+	padding-top:5%;
+	padding-bottom: 5%;
+}
+
+.logoteam{
+	text-align: left;
+}
+
+.content{
+	margin-left:6%;
+}
+
+.teamimg{
+	max-width: 100%;
+}
+/*footer*/
+.footlogo{
+	height:14px;
+	margin-bottom: 20px;
+}
+
+.list-inline{
+	margin-bottom: 20px;
+}
+.footermargin{
+	padding: 35px;
+}
+
+.footstyle{
+	color:#808184;
+
+}
+
+.footstyle:hover, .footerstyle:active, .footerstyle:focus{
+	text-decoration: none;
+	color:#74C9CA;
+}
+
+.footersubscribe{
+	color:#74C9CA;
+}
+
+.footersubscribe:hover{
+	text-decoration:none;
+	color:#808184;
+}
+
+.fa{
+	font-size:22px;
+}
+
+.fa{
+	color:#808184; 
+	font-size:22px;
+
+}
+
+.fa:hover{
+	color:#74C9CA;
+}
+
+@media screen and (max-width: 768px) {
+
+   .footfactor{
+      text-align: center;
+    }
+	
+	
+	.footlist{
+		font-size:12px;
+	}
+	
+	.footersubscribe{
+		font-size:12px;
+	}
+	
+	.teambrief{
+		font-size:130%;
+	}
+	
+	.logoteam{
+		text-align: center;
+	}
+	
+	.content{
+		margin-left:0%;
+		margin-top: 5%;
+	}
+	
+	.teamimg{
+		width: 55%;
+		height: auto;
+	}
+	
+	.teaminfo{
+		font-size:110%;
+	}
+	
+	.homeword{
+		padding-top:7%;
+		margin-left: 10%;
+		font-size:200%;
+}

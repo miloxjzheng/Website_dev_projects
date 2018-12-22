@@ -1,0 +1,44 @@
+server:
+  host: http://127.0.0.1
+  port: 8080
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+druid:
+  dbUrl: jdbc:mysql://167.99.238.182:3306/token72?useUnicode=true&characterEncoding=utf-8
+  username: blockzone_rw
+  password: Blockzone2018
+  driver-class-name: com.mysql.jdbc.Driver
+  initialSize: 5
+  minIdle: 5
+  maxActive: 20
+  maxWait: 60000
+  timeBetweenEvictionRunsMillis: 60000
+  minEvictableIdleTimeMillis: 300000
+  validationQuery: SELECT 1
+  testWhileIdle: true
+  testOnBorrow: false
+  testOnReturn: false
+  poolPreparedStatements: true
+  maxPoolPreparedStatementPerConnectionSize: 20
+  connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+mybatis:
+  typeAliasesPackage: cn.liangjiateng.model
+  mapper-locations: classpath:mapper/*
+  configuration:
+    cache-enabled: true
+    lazy-loading-enabled: true
+    multiple-result-sets-enabled: true
+    use-column-label: true
+    default-statement-timeout: 25
+    auto-mapping-unknown-column-behavior: warning
+    default-fetch-size: 100
+    safe-row-bounds-enabled: false
+    map-underscore-to-camel-case: true
+
+mapper:
+  mappers:
+    - tk.mybatis.mapper.common.Mapper
+  notEmpty: true

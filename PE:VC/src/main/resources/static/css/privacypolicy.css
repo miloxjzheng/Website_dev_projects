@@ -1,0 +1,178 @@
+/* CSS Document */
+body {
+	font-family: Verdana, Geneva, sans-serif;
+}
+/*Nav*/
+  .navbar {
+      background-color: #FFFFFF;
+      border: 0;
+      font-size: 12px !important;
+      border-radius: 0;
+	  height:80px;
+  }
+
+  .colormain:hover{
+      color: #74C9CA !important;
+      background-color: #fff !important;
+  }
+
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #808184 !important;
+	  margin-top: 30px;
+  }
+
+.container-fluid{
+	padding:0px;
+}
+
+
+.navlogo{
+	height:30px;
+	margin-top: 15px;
+}
+
+.navbar-right{
+	margin-right:57px;
+}
+
+.navbar-collapse{
+	background-color:#FFFFFF;
+}
+
+
+.colormain{
+	color:#808184;
+	font-size: 18px;
+	padding: auto;
+	margin-top: 18px;
+}
+
+#colorsubscribe{
+	color:#74C9CA;
+	font-size: 18px;
+	padding: auto;
+	margin-top: 18px;
+}
+
+
+
+#colorsubscribe:hover{
+      color: #808184 !important;
+      background-color: #FFFFFF !important;
+  }
+
+/*Privatepolicy*/
+
+
+.row{
+	margin-top:100px;
+	margin-bottom: 30px;
+}
+
+
+
+.pp{
+	font-size:30px;
+	margin-top:30px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.main{
+	font-size:15px;
+	margin-top:20px;
+}
+
+.title{
+	font-size:21px;
+	margin-top:40px;
+}
+
+.subtitle{
+	font-size:20px;
+	margin-top:30px;
+}
+
+.link{
+	color:#74C9CA;
+}
+
+.emailaddress{
+	color:#74C9CA;
+}
+
+.link:hover, .link:active, .link:focus{
+	color:#A8DDDD;
+}
+
+.emailaddress:hover, .emailaddress:active, .emailaddress:focus{
+	color:#A8DDDD;
+}
+
+/*footer*/
+.footlogo{
+	height:14px;
+	margin-bottom: 20px;
+}
+
+.list-inline{
+	margin-bottom: 20px;
+}
+
+.footermargin{
+	padding: 35px;
+}
+
+.footstyle{
+	color:#808184;
+}
+
+
+
+.footstyle:hover, .footerstyle:active, .footerstyle:focus{
+	text-decoration: none;
+	color:#74C9CA;
+}
+
+.footersubscribe{
+	color:#74C9CA;
+}
+
+.footersubscribe:hover{
+	text-decoration:none;
+	color:#808184;
+}
+
+.fa{
+	font-size:22px;
+}
+
+.fa{
+	color:#808184; 
+	font-size:22px;
+
+}
+
+.fa:hover{
+	color:#74C9CA;
+}
+
+
+@media screen and (max-width: 768px) {
+
+   .footfactor{
+      text-align: center;
+    }
+	
+	.maininput{
+		margin-left: 7%;
+		margin-right: 7%;
+	}
+
+	.footlist{
+		font-size:12px;
+	}
+	.footersubscribe{
+		font-size:12px;
+	}

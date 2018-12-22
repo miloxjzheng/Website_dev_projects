@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Token72 - Contact</title>
+  <link rel="shortcut icon" href="/img/tabicon.jpeg" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+        function subscribe() {
+            var name =$("#name").val();
+            var subject =$("#subject").val();
+            var email =$("#email").val();
+            var message = $("#message").val();
+            var json = {
+                name: name,
+                subject: subject,
+                email: email,
+			    content : message};
+            $.ajax({
+                type: "POST",
+                dataType: "json",//服务器返回的数据类型
+                contentType: "application/json",//post请求的信息格式
+                url: "https://token72.com/api/contact",
+                data: JSON.stringify(json),
+                success: function (result) {
+                    console.log(result);//在浏览器中打印服务端返回的数据(调试用)
+                    if (result.code === 1) {
+                        alert("SUCCESS");
+                        self.location.href = '/'
+                    } else {
+                        alert(result.message);
+                    }
+                }
+            });
+        }
+	</script>
+</head>
+
+<body>
+<!-- nav -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/"><img src="/img/Nav-Logo.png" alt="Token72" class="navlogo"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      	<ul class="nav navbar-nav navbar-right">
+        	<li><a href="/" class="colormain">About Us</a></li>
+			<li><a href="/team" class="colormain">Team</a></li>
+			<li><a href="/subscribe" id="colorsubscribe">Subscribe</a></li>
+      	</ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contact -->
+<section id="Contact">
+	<div class="row maininput">
+	<div class="col-sm-4">
+	</div>
+	<div class="col-sm-4" style="margin-left: 2%; margin-right: 2%">
+	<div class="contacttitle">
+		<p class="contactus">Contact Us</p>
+	</div>
+		<p class="word1">Via <a class="emailaddress" href="mailto:info@token72.io">info@token72.io</a></p>
+		<p class="word2">Or fill the form below:</p>
+	<form id="form1">
+		<p class="formstyle">Name</p>
+  		<input class="input" type="text" name="name" id="name">
+  		<p class="formstyle">Email Address</p>
+  		<input class="input" type="text" name="emailaddress" id="email">
+		<p class="formstyle">Subject</p>
+		<input class="input" type="text" name="subject" id="subject">
+		<p class="formstyle">Message</p>
+		<textarea class="messageinput" type="text" cols="40" rows="6" name="message" id="message"></textarea>
+		<br>
+		<br>
+		<br>
+  		<input class="btn" type="button" onclick="subscribe()" value="Subscribe Now">
+		</form>
+	</div>
+	<div class="col-sm-4">
+	</div>
+	</div>
+
+<!-- Footer -->
+<footer section="Footer">
+	<div class="row">
+		<div class="footermargin">
+	<div class="col-sm-2 footfactor">
+	<a class="foot-brand" href="#Home"><img src="/img/footlogo.png" alt="Token72" class="footlogo"></a>
+	</div>
+	<div class="col-sm-4 footfactor">
+		<ul class="list-inline footlist">
+			<li><a href="/contact" class="footstyle">Contact</a></li>
+			<li><a href="/policy" class="footstyle">Privacy Policy</a></li>
+			<li><a href="/tofservice" class="footstyle">Terms of Services</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-2 footfactor">
+	<ul class="list-inline footermenu2" >
+        <li><a class="footersubscribe">Stay Tuned and Subscribe</a ></li>
+		</ul>
+	</div>
+		<div class="col-sm-2 footfactor">
+	<ul class="list-inline footermenu2" >
+		<li><a href="https://twitter.com/Token72Official" class="footericon"><i class="fa fa-twitter" style="font-size:22px;"></i></a></li>
+		<li><a href="https://t.me/Token72Official" class="footericon"><i class="fa fa-telegram" style="font-size:22px;"></i></a></li>
+		</ul>
+	</div>
+	<div class="col-sm-2 footfactor">
+		<p style="font-size:12px;">&copy; 2018 by Token72</p >
+			</div>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
